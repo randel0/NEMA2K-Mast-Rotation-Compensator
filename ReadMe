@@ -1,3 +1,20 @@
-NMEA 2000 Mast Rotation Project
-This is designed to run on the Hat labs ESP-32 development board.  https://hatlabs.fi/product/sailor-hat-with-esp32
-The board profile that worked for me is "DOIT ESP32 DEVKIT I", but only when I modified the upload speed to 115200.
+NMEA 2000 Mast Rotation Compensator
+
+The goal of this project is to create a small, rugged and relatively inexpensive solution to providing mast rotation-compensated apparrent wind angle information to NMEA200 instruments.
+
+A Honeywell Magnetic Position Sensor (https://sps.honeywell.com/us/en/products/advanced-sensing-technologies/aero-and-transportation-sensing/aero-and-transportation-sensors/motion-and-position-sensors/magnetic-position-sensors/arc) is used to measure the mast angle and translate it to a DC voltage. This sensor was chosen because of it's non-contact design, industrial design, and occasional availability on eBay at a deeply discounted price.
+
+The sensor output is scaled through a resistor divider so the max voltage will not exceed 3.3VDC.
+
+A Hat Labs ESP-32 development board (https://hatlabs.fi/product/sailor-hat-with-esp32) is used to house the divider and other peripherals. An ADS1115 ADC and 0.96" OLED display are connected to the processor via I2C.
+
+The processor reads the voltage from the divider, smooths the data, and scales it to populate a variable that corresponds to the mast rotation angle, from -50° to +50°.
+
+The processor parses incoming Apparent Wind Speed and Apparent Wind Angle data from the NME200 bus, and converts the angle data from radians to degrees.
+
+The incoming angle data is added to the mast rotation angle, converted back to radians, and re-transmitted on the NMEA2000 bus along with the wind speed.
+
+The Mast Rotation Compensator has it's own product code and ID, so instruments on the NMEA2000 network can select it as the source of AWS/AWD data.
+
+Notes:
+When uploading to the the Hat Labshe board profile that worked for me is "DOIT ESP32 DEVKIT I", but only when I modified the upload speed to 115200.
