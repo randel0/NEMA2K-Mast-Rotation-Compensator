@@ -21,7 +21,7 @@ When uploading to the the Hat Labs board from the Arduino IDE, the board profile
 
 The Hat Labs board has SDA and SCL on pins other than 21 and 22.  I modified the board to use thise pins.
 
-My Honeywell sensor requires 24VDC for power.  I provided this with a small Murata DC-DC converter that I added to the Hat Labs board.
+My Honeywell sensor requires 24VDC for power.  I provided this with a small Murata DC-DC converter (https://www.mouser.com/ProductDetail/81-NMG1224SC) that I added to the Hat Labs board.
 
 My instruments include a Nexus wind instrument with a Garmin GND-10 black box bridge and multiple Raymarine i70s displays.
 
