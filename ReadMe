@@ -17,4 +17,12 @@ The incoming angle data is added to the mast rotation angle, converted back to r
 The Mast Rotation Compensator has it's own product code and ID, so instruments on the NMEA2000 network can select it as the source of AWS/AWD data.
 
 Notes:
-When uploading to the the Hat Labshe board profile that worked for me is "DOIT ESP32 DEVKIT I", but only when I modified the upload speed to 115200.
+When uploading to the the Hat Labs board from the Arduino IDE, the board profile that worked for me is "DOIT ESP32 DEVKIT I", but only when I modified the upload speed to 115200.
+
+The Hat Labs board has SDA and SCL on pins other than 21 and 22.  I modified the board to use thise pins.
+
+My Honeywell sensor requires 24VDC for power.  I provided this with a small Murata DC-DC converter that I added to the Hat Labs board.
+
+My instruments include a Nexus wind instrument with a Garmin GND-10 black box bridge and multiple Raymarine i70s displays.
+
+I sail a Farrier F-32rx.
