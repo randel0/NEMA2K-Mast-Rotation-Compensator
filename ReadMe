@@ -17,7 +17,6 @@ The incoming angle data is added to the mast rotation angle, converted back to r
 The Mast Rotation Compensator has it's own product code and ID, so instruments on the NMEA2000 network can select it as the source of AWS/AWD data.
 
 Notes:
-I am still debugging code.
 
 When uploading to the the Hat Labs board from the Arduino IDE, the board profile that worked for me is "DOIT ESP32 DEVKIT I", but only when I modified the upload speed to 115200.
 
