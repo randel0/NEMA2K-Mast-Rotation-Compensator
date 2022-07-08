@@ -1,6 +1,6 @@
 NMEA 2000 Mast Rotation Compensator
 
-The goal of this project is to create a small, rugged and relatively inexpensive solution to providing mast rotation-compensated apparrent wind angle information to NMEA200 instruments.
+The goal of this project is to create a small, rugged and relatively inexpensive solution to providing mast rotation-compensated apparent wind angle information to NMEA200 instruments.
 
 A Honeywell Magnetic Position Sensor (https://sps.honeywell.com/us/en/products/advanced-sensing-technologies/aero-and-transportation-sensing/aero-and-transportation-sensors/motion-and-position-sensors/magnetic-position-sensors/arc) is used to measure the mast angle and translate it to a DC voltage. This sensor was chosen because of it's non-contact design, industrial design, and occasional availability on eBay at a deeply discounted price.
 
